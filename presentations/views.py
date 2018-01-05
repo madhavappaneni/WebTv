@@ -4,7 +4,7 @@ import urllib2
 from bs4 import BeautifulSoup
 import requests
 import json
-
+from .models import PostModel
 nitc = "http://www.nitc.ac.in"
 url = ('https://newsapi.org/v2/top-headlines?'
 		'sources=the-hindu&'
@@ -15,6 +15,8 @@ def ind_news(request):
 
 def nitc_news(request):
 	return HttpResponse(get_nitc_news())
+def presentation_news(request):
+	return HttpResponse(get_presentation_news())
 
 def get_ind_news():
 	response = requests.get(url)
@@ -31,5 +33,12 @@ def get_nitc_news():
 	for i in range(5):
 		newsArr.append(news[i].get_text()+"<br>")
 	return "\n".join(x for x in newsArr)
+
+
+def get_presentation_news():
+	presentation_array = []
+	for e in PostModel.objects.all():
+		presentation_array.append(str(e)+"<br>")
+	return "\n".join(line for line in presentation_array)
 
 

@@ -15,10 +15,11 @@ Including another URLconf
 """
 from django.conf.urls import url
 from django.contrib import admin
-from presentations.views import ind_news, nitc_news
+from presentations.views import ind_news, nitc_news, presentation_news
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^ind_news/', ind_news),
     url(r'^nitc_news/', nitc_news),
+    url(r'^presentation_news/', presentation_news),
 
 ]
