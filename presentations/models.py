@@ -7,4 +7,4 @@ class PostModel(models.Model):
 	date = models.DateTimeField()
 
 	def __unicode__(self):
-		return str(self.title)+" at "+str(self.place)+"on "+str(self.date.strftime("%H:%M, %A, %d %B %Y."))
+		return str(self.title)+" at "+str(self.place)+" on "+str(self.date.strftime("%H:%M, %A, %d %B %Y."))
