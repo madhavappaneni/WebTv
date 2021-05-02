@@ -1,2 +1,2 @@
 # WebTv
-A website to handle the android TV app being developed for NALANDA.
+A website to handle Android TV app developed for NALANDA.
