@@ -4,8 +4,8 @@ from twilio.rest import Client
 
 username = 'appanenim@gmail.com'
 password = 'Cj@34000'
-auth_token  = "8830265f57ad743f8c98c2e2a8586e85"
-account_sid = "ACc35ec9bd95160c2d815f58d62c127008"
+auth_token  = "XXX"
+account_sid = "XXX"
 
 def check_emails(username, password):
 	email_text = ""
